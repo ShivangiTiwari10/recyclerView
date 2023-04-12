@@ -44,4 +44,6 @@ class MainActivity : AppCompatActivity() {
         songList.adapter = MyAdapter(songsObjects)
         songList.layoutManager = LinearLayoutManager(this)
     }
+
+
 }
