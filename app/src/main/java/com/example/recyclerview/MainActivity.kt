@@ -32,7 +32,9 @@ class MainActivity : AppCompatActivity() {
         songsObjects.add(Song("Lodon", "this is sonuNigam",R.color.purple_200))
         songsObjects.add(Song("Mumbai", "this is imraan",R.color.teal_700))
         songsObjects.add(Song("Laxmi", "this is Salman",R.color.white))
-        songsObjects.add(Song("Key", "this is shreya",R.color.purple_200))
+        songsObjects.add(Song("Key", "this is shreya",R.color.green))
+        songsObjects.add(Song("Hello", "this is discription",R.color.BlossomPink))
+        songsObjects.add(Song("Abcd", "this is JioSavan",R.color.yellow))
 
         songList.adapter = MyAdapter(songsObjects)
         songList.layoutManager = LinearLayoutManager(this)
