@@ -2,6 +2,8 @@ package com.example.recyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.recyclerview.adapter.NewsAdapter
 import com.example.recyclerview.databinding.ActivityNewRecyclerBinding
 import com.example.recyclerview.model.News
 
@@ -37,7 +39,10 @@ class NewRecycler : AppCompatActivity() {
 
             val news = News(title[eachIndexes], discription[eachIndexes], image[eachIndexes])
             newsArrayList.add(news)
+
         }
+        binding.recyclerView.adapter = NewsAdapter(newsArrayList)
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
 
     }
 }
