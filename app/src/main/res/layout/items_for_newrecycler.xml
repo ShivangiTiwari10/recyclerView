@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
       >
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/profile_image"
             android:layout_width="96dp"
             android:layout_height="96dp"
@@ -23,6 +23,7 @@
             app:civ_border_color="#FF000000"
             app:civ_border_width="2dp"
             android:padding="5dp"
+            app:shapeAppearanceOverlay="@style/softCorner"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
