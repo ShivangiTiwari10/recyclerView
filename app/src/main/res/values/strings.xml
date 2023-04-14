@@ -2,4 +2,6 @@
     <string name="app_name">RecyclerView</string>
     <string name="textview">TextView</string>
     <string name="news_recycler">News Recycler</string>
+    <string name="discription">Discription</string>
+    <string name="news">News</string>
 </resources>
