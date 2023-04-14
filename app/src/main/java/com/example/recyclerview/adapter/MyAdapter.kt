@@ -1,4 +1,4 @@
-package com.example.recyclerview
+package com.example.recyclerview.adapter
 
 
 import android.view.LayoutInflater
@@ -7,10 +7,11 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.recyclerview.R
 import com.example.recyclerview.model.Song
 
 class MyAdapter(val songs: List<Song>) :
-    androidx.recyclerview.widget.RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+    RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -22,12 +23,12 @@ class MyAdapter(val songs: List<Song>) :
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.textTittle.text = songs[position].title
         holder.textDisciption.text = songs[position].discription
+        holder.container.setBackgroundColor(songs[position].background)
 
 //        var color = "#00FF00"
 //        if ((position % 2) == 0) {
 //            color = "#EEEE"
 //        }
-//        holder.container.setBackgroundColor(parseColor(("#171C26")))
 //
 //
     }
