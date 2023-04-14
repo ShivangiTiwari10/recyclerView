@@ -10,6 +10,9 @@ import com.example.recyclerview.databinding.ActivityMainBinding
 import com.example.recyclerview.model.Song
 import kotlinx.android.synthetic.main.activity_main.*
 
+
+//    RecyclerView is Enhance version of ListView
+//    it  has inBuiltView holder
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
