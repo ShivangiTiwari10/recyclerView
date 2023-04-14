@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.recyclerview.model.Song
 
 class MyAdapter(val songs: List<Song>) :
     androidx.recyclerview.widget.RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
