@@ -13,4 +13,10 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="softCorner">
+              <item name="cornerFamily">rounded</item>
+              <item name="collapsedSize">10dp</item>
+              <item name="color">@color/black</item>
+    </style>
 </resources>
