@@ -25,14 +25,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         val songsObjects = mutableListOf<Song>()
-        songsObjects.add(Song("Hello", "this is discription"))
-        songsObjects.add(Song("Abcd", "this is JioSavan"))
-        songsObjects.add(Song("1235", "this is LocalBeats"))
-        songsObjects.add(Song("12.36", "this is radio"))
-        songsObjects.add(Song("Lodon", "this is sonuNigam"))
-        songsObjects.add(Song("Mumbai", "this is imraan"))
-        songsObjects.add(Song("Laxmi", "this is Salman"))
-        songsObjects.add(Song("Key", "this is shreya"))
+        songsObjects.add(Song("Hello", "this is discription",R.color.teal_200))
+        songsObjects.add(Song("Abcd", "this is JioSavan",R.color.purple_200))
+        songsObjects.add(Song("1235", "this is LocalBeats",R.color.purple_700))
+        songsObjects.add(Song("12.36", "this is radio",R.color.white))
+        songsObjects.add(Song("Lodon", "this is sonuNigam",R.color.purple_200))
+        songsObjects.add(Song("Mumbai", "this is imraan",R.color.teal_700))
+        songsObjects.add(Song("Laxmi", "this is Salman",R.color.white))
+        songsObjects.add(Song("Key", "this is shreya",R.color.purple_200))
 
         songList.adapter = MyAdapter(songsObjects)
         songList.layoutManager = LinearLayoutManager(this)
