@@ -23,7 +23,10 @@ class NewRecycler : AppCompatActivity() {
         val title = arrayOf("Politics", "science", "environment", "Astrology", "Technology")
         val discription = arrayOf(
             "Authoritarians Having a Bad Time The Left Anchor hosts discuss recent",
-            "TLMTI’s Stanley Browne Laboratory (SBL), where basic science research is conducted",
+            "TLMTI’s Stanley Browne Laboratory (SBL), where basic science research is conducted //n" +
+                    "where basic science research is conducted where basic science research is conducted where basic science research is conducted //n" +
+                    "where basic science research is conducted //n where basic science research is conducted //n where basic science research is conducted" +
+                    "where basic science research is conducted ",
             "Plat a Tree and Save Earth - Sankalp Taru Foundation",
             "Astronomy Research. Climate Research. Planetary Research",
             "Cloud-based. SMS. Programas: Prehospital, Desastre, Emergencia Obstetrica."
@@ -52,7 +55,6 @@ class NewRecycler : AppCompatActivity() {
         }
         newsAdapter =NewsAdapter(newsArrayList,this)
         binding.recyclerView.adapter = newsAdapter
-
 
 
 //        To set recyclerView  horizontally
