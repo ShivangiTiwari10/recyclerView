@@ -27,7 +27,7 @@ class NewsAdapter( private val news: ArrayList<News>,private var context: Activi
     //         populate items with data
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         holder.textTittle.text = news[position].title
-        holder.texDiscribe.text = news[position].description
+//        holder.texDiscribe.text = news[position].description
         holder.profile.setImageResource(news[position].image)
 
         holder.itemView.setOnClickListener {
