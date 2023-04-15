@@ -1,15 +1,18 @@
 package com.example.recyclerview.adapter
 
+import android.app.Activity
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.recyclerview.NewsDetailActivity
 import com.example.recyclerview.R
 import com.example.recyclerview.model.News
 
-class NewsAdapter(private val news: ArrayList<News>) :
+class NewsAdapter( private val news: ArrayList<News>,private var context: Activity) :
     RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
 //       if layoutManager fails to find suitable view for each item it calls onCreateViewHolder to create view
@@ -26,6 +29,14 @@ class NewsAdapter(private val news: ArrayList<News>) :
         holder.textTittle.text = news[position].title
         holder.texDiscribe.text = news[position].description
         holder.profile.setImageResource(news[position].image)
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, NewsDetailActivity::class.java)
+            intent.putExtra("title",news[position].title)
+            intent.putExtra("discrip",news[position].description)
+          context.startActivity(intent)
+
+        }
     }
 
     //      getItemCount method wants- no. of items
