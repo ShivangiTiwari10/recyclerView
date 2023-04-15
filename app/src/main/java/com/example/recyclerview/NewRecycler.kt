@@ -11,6 +11,7 @@ class NewRecycler : AppCompatActivity() {
 
     private lateinit var binding: ActivityNewRecyclerBinding
     private lateinit var newsArrayList: ArrayList<News>
+    private lateinit var newsAdapter: NewsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,8 +36,13 @@ class NewRecycler : AppCompatActivity() {
             R.drawable.floura,
             R.drawable.environment
         )
+
+//        to set hav bhav of items inside recyclerView vertically scrolling,horizontally uniform grid
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+
 //        initialized
-        newsArrayList = ArrayList()
+        newsArrayList =arrayListOf()
+
 
         for (eachIndexes in title.indices) {
 
@@ -44,12 +50,16 @@ class NewRecycler : AppCompatActivity() {
             newsArrayList.add(news)
 
         }
-        binding.recyclerView.adapter = NewsAdapter(newsArrayList)
-//        to set hav bhav of items inside recyclerView vertically scrolling,horizontally uniform grid
-        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        newsAdapter =NewsAdapter(newsArrayList,this)
+        binding.recyclerView.adapter = newsAdapter
+
+
 
 //        To set recyclerView  horizontally
-        binding.recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+//        binding.recyclerView.layoutManager =
+//            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+
     }
 
 }
