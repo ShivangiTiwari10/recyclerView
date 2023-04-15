@@ -33,7 +33,6 @@ class NewRecycler : AppCompatActivity() {
             R.drawable.floura,
             R.drawable.environment
         )
-
 //        initialized
         newsArrayList = ArrayList()
 
@@ -47,5 +46,8 @@ class NewRecycler : AppCompatActivity() {
 //        to set hav bhav of items inside recyclerView vertically scrolling,horizontally uniform grid
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
 
+//        To set recyclerView  horizontally
+        binding.recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
     }
+
 }
