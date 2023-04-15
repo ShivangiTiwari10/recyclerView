@@ -12,5 +12,10 @@ class NewsDetailActivity : AppCompatActivity() {
 
         binding = ActivityNewsDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.titles.text = intent.getStringExtra("title")
+        binding.diss.text = intent.getStringExtra("discrip")
+        binding.shapeableImageView.setImageResource(intent.getIntExtra("image", R.drawable.floura))
+
     }
 }
