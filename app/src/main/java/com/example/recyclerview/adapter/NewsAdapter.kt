@@ -34,6 +34,7 @@ class NewsAdapter( private val news: ArrayList<News>,private var context: Activi
             val intent = Intent(context, NewsDetailActivity::class.java)
             intent.putExtra("title",news[position].title)
             intent.putExtra("discrip",news[position].description)
+            intent.putExtra("image",news[position].image)
           context.startActivity(intent)
 
         }
