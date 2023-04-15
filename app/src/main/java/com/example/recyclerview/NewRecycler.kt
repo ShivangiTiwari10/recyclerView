@@ -17,6 +17,8 @@ class NewRecycler : AppCompatActivity() {
         binding = ActivityNewRecyclerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
         val title = arrayOf("Politics", "science", "environment", "Astrology", "Technology")
         val discription = arrayOf(
             "Authoritarians Having a Bad Time The Left Anchor hosts discuss recent",
