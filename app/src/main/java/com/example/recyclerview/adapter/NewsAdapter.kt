@@ -20,7 +20,7 @@ class NewsAdapter(private val newsArrayList: ArrayList<News>, private var contex
         fun onItemClicking(position: Int)
     }
 
-    fun setItemClickListener(listener: onItemClickListner) {
+    fun setOnItemClickListener(listener: onItemClickListner) {
 
         myListener = listener
     }
